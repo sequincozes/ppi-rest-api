@@ -1,0 +1,25 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE xml>
+<xml>
+    <personen>
+        <person>
+            <id>person1</id>
+            <name>
+                <vorname>Alan</vorname>
+                <nachname>Turing</nachname>
+            </name>
+            <geburtstag>23. Juni 1912</geburtstag>
+            <beruf>Mathematiker</beruf>
+            <beruf>Informatiker</beruf>
+        </person>
+        <person>
+            <id>person2</id>
+            <name>
+                <vorname>Judea</vorname>
+                <nachname>Pearl</nachname>
+            </name>
+            <geburtstag>unknown</geburtstag>
+            <beruf>Informatiker</beruf>
+        </person>
+    </personen>
+</xml>
