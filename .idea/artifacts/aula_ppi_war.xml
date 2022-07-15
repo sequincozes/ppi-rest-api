@@ -8,7 +8,7 @@
       </options>
     </properties>
     <root id="archive" name="aula_ppi-1.0-SNAPSHOT.war">
-      <element id="artifact" artifact-name="aula_ppi:war exploded" />
+      <element id="artifact" artifact-name="api" />
     </root>
   </artifact>
 </component>

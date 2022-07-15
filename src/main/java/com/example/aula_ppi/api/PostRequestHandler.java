@@ -2,14 +2,21 @@ package com.example.aula_ppi.api;
 
 import com.example.aula_ppi.helpers.PersonenModel;
 import com.example.aula_ppi.jaxb.PersonType;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.*;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.xml.transform.stream.StreamSource;
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.util.stream.Collectors;
 
 
 /**
@@ -33,26 +40,13 @@ public class PostRequestHandler extends RequestHandler {
         response.setContentType("application/json");
         response.setCharacterEncoding("UTF-8");
         response.setStatus(HttpServletResponse.SC_OK);
-        responseWriter.println("{}");
+        responseWriter.println(
+                request.getReader().lines().collect(Collectors.joining())
+        );
         return;
 
-//		try {
-//			if (id == null) {
-//				// add a person (single item of the collection)
-//				addPerson(request, response);
-//			}
-//			else {
-//				// this is generally not used
-//				String error = "This method type is not allowed for the address.";
-//				response.setStatus(HttpServletResponse.SC_METHOD_NOT_ALLOWED);
-//				responseWriter.println(failureMessage(error));
-//				return;
-//			}
-//		}
-//		catch (Exception e) {
 //			response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
 //			responseWriter.println(failureMessage(e.getMessage()));
-//		}
     }
 
 
